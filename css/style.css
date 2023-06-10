@@ -29,7 +29,7 @@ main{
     width: 15vw;
     height: 25vh;
     border-top-left-radius: 10px;
-    border-bottom-right-radius: 100%; 
+    /*border-bottom-right-radius: 100%;*/ 
     transition-duration: 1s;
 }
 .card img:hover{
@@ -41,5 +41,49 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
+}
+
+
+
+/* user register form  */
+
+.user-register{
+    max-width: 40vw;
+    max-height: 60vh;
+    box-shadow: 0px 0px 10px 0px #333;
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 10px;
+    
+
+}
+
+.user-register form{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: 3% auto;
+    
+
+}
+
+.user-register form input{
+    text-align: left;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.user-register form input:hover{
+    border-color: blue;
+    
+}
+
+.user-register form  button{
+    padding: 5px;
+    margin-top: 10px;
+    width: 6vw;
+    background-color:forestgreen;
+    color: white;
+    font-size: 20px;
 }
 
