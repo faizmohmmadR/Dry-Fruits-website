@@ -1,4 +1,4 @@
-*{
+.div3{
     margin: 0px;
     padding: 0px;
     box-sizing: content-box;
@@ -6,3 +6,26 @@
     text-align: center;
 }
 
+header{
+
+    position:relative;
+    height: 7vh;
+    background-color: #78b812;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#language{
+    display: inline;
+    margin-left: 10vh;
+    background-color: blueviolet;
+}
+
+#login{
+    display: inline;
+    margin-right: 10vh;
+    background-color: #78b812;
+    
+}
