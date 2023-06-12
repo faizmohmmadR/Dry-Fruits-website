@@ -5,6 +5,70 @@
     text-align: center;
 }
 
+
+/*Header style*/
+header{
+
+    position:relative;
+    height: 7vh;
+    background-color: #78b812;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*Localization Style*/
+#language{
+    display: inline;
+    margin-left: 10vh;
+}
+#language select{
+    width: 6vw;
+    height: 4vh;
+    color: white;
+    background-color: #78b812;
+    border: 0;
+    outline: none;
+    font-size: 1.1em;
+    letter-spacing: 1.5px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #4d7807;
+}
+
+#language select option{
+    color: white;
+    background-color:  #78b812;
+    font-size: 1.1em;
+    letter-spacing: 1.5px;
+}
+#farsi{
+     direction: rtl;
+}
+
+/*Sign Up and Log In Style*/
+#login{
+    display: inline;
+    margin-right: 10vh;
+    background-color: #78b812;
+    
+}
+#login button {
+    width: 6vw;
+    height: 4vh;
+    background-color: #78b812;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #4d7807;
+}
+#login button a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+}
+
+
 main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
