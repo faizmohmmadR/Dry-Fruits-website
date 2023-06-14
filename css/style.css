@@ -70,14 +70,115 @@ header{
 
 
 main{
+    display: flex;
+    flex-direction: column;
+}
+
+/* styling for top selling */
+
+
+.top-selling-title{
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.top-selling{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* justify-content: space-around; */
+}
+
+.top-selling .top-selling-cards{
+    background-color: #3ab505;
+    width: 25vw;
+    height: 70vh;
+    /* border: 1px solid red; */
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #333;
+    border-radius: 10px;
+    margin: 10px auto;
+      
+}
+
+.top-selling .top-selling-cards img{
+    width: 99.5%;
+    height: 50%;
+    /* border: 1px solid green; */
+    /* border-top-right-radius: 10px;
+    border-top-left-radius: 10px; */
+    border-radius: 10px;
+    transition-duration: 3s;
+    transition-delay: 0.2s;
+}
+
+
+.top-selling .top-selling-cards img:hover{
+    transform: scale(-1,-1);
+    border-radius: 15px;
+}
+
+
+.top-selling .top-selling-cards .top-selling-content{
+    width: 99%;
+    height: 49%;
+    margin: 0px auto;
+    background-color: #3ab505;
+    border-radius: 10px;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* .top-selling .top-selling-content p{
+    padding: 0px;
+    color:  red;
+    border: 1px solid saddlebrown;
+    
+} */
+
+
+.top-selling .top-selling-cards .top-selling-content .price-name{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+    
+    /* border: 1px solid red; */
+}
+
+.top-selling .top-selling-cards .top-selling-content .sold-stars{
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+
+
+
+
+
+
+
+/* sylling for card */
+
+
+
+.cards-title{
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.cards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0px auto;
     margin: 10px;
-
 }
 
-.card{
+
+
+.cards .card{
     max-height: 100vh;
     box-shadow: 0px 0px 6px 0px #333;
     display: flex;
@@ -89,14 +190,14 @@ main{
     
 }
 
-.card img{
+.cards .card img{
     width: 15vw;
     height: 25vh;
     border-top-left-radius: 10px;
     /*border-bottom-right-radius: 100%;*/ 
     transition-duration: 1s;
 }
-.card img:hover{
+.cards .card img:hover{
     border-bottom-right-radius: 0px;
     
 }
