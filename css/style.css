@@ -252,3 +252,51 @@ main{
     font-size: 20px;
 }
 
+
+.footer{
+
+    margin-top: 100px;
+    width: 69.2vw;
+    padding: 190px 15%;
+    background: darkslateblue;
+    color: #3ab505;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+.footer a{
+
+    display: block;
+    text-decoration: none;
+    color: ghostwhite;
+}
+.copy{
+    background: chartreuse;
+    display: flex;
+    font-size: smaller;
+    justify-content: center;
+    height: 5vh;
+
+
+
+}
+.copy div a i{
+
+    font-size: 1.7em;
+
+
+}
+.copy div{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 6vw;
+}
+.copy p{
+   font-size: 1.5em;
+   display: flex;
+   align-items: center;
+
+}
