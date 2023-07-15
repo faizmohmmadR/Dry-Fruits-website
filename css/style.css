@@ -248,8 +248,8 @@ main {
 /* user register form  */
 
 .user-register {
-  max-width: 40vw;
-  max-height: 60vh;
+  width: 45vw;
+  height: 60vh;
   box-shadow: 0px 0px 10px 0px #333;
   margin: 100px auto;
   border-radius: 10px;
@@ -259,7 +259,7 @@ main {
 .user-register form {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 90%;
   margin: 3% auto;
 }
 
@@ -274,13 +274,20 @@ main {
 }
 
 .user-register form button {
-  padding: 5px;
+  padding: 10px;
   margin-top: 10px;
-  width: 6vw;
-  background-color: forestgreen;
+  width: 10vw;
+  background-color: #067834;
   color: white;
-  font-size: 20px;
+  font-weight: bold;
+  border: 0px;
 }
+
+.user-register form button:hover {
+  background-color: #067000;
+}
+
+/* footer styling  */
 
 .footer {
   margin-top: 100px;
@@ -318,3 +325,88 @@ main {
   display: flex;
   align-items: center;
 }
+
+/* Add Product page Styles */
+.add-product{
+  box-shadow: 0px 0px 10px 0px #333;
+  border-radius: 10px;
+  width: 50vw;
+  height: 70vh;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.add-product h1{
+  margin: 30px 0px;
+}
+.add-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  height: 85%;
+  margin: 0px auto;
+}
+.add-form input{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 90%;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.add-form input:hover{
+  border-color: blue;
+}
+
+
+.btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 90%;
+}
+.btn input{
+  background-color: #067834;
+  border: 0px;
+  margin: 0px 2px;  
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  width: 10vw;
+}
+
+.btn input:hover{
+  background-color: #067000;
+}
+
+
+@media only screen and (max-width: 600px) {
+.add-product {
+    width: 90%;
+  }
+
+  .add-form{
+    width: 90%;
+  }
+  .user-register{
+    width: 90%;
+  }
+  .user-register form{
+    width: 80%;
+  }
+}
+
+
+
+/* .add-form label{
+  display: flex;
+  text-align: start;
+  margin-top: 15px;
+} */
