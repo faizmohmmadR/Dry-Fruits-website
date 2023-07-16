@@ -4,7 +4,10 @@
   box-sizing: content-box;
   text-align: center;
 }
-
+body{
+  background: #e8e8e8;
+  color: black;
+}
 /*Header style*/
 header {
   position: relative;
@@ -244,6 +247,7 @@ main {
 }
 
 .cards .card {
+  background-color: white;
   height: 45vh;
   width: 18vw;
   box-shadow: 0px 0px 6px 0px #333;
@@ -324,42 +328,118 @@ main {
 
 /* footer styling  */
 
-.footer {
-  margin-top: 100px;
-  width: 69.2vw;
-  padding: 190px 15%;
-  background: #067834;
-  color: #3ab505;
+footer{
+  background-color: #067834;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container{
   display: flex;
   justify-content: space-around;
+  color: #fff;
 }
-.footer a {
-  display: block;
-  text-decoration: none;
-  color: ghostwhite;
+
+@media screen and (max-width: 750px) {
+  .container , .copyrightText{
+    font-size: 10px;
+  }
+  
 }
-.copy {
-  background: chartreuse;
+
+@media screen and (max-width: 750px) {
+  .container ,.copyrightText{
+    font-size: 7px;
+  }
+  footer{
+    height: 25vh;
+  }
+  .sec-aboutus ul li a i{
+    font-size: 12px;
+  }
+}
+
+.sec-aboutus{
   display: flex;
-  font-size: smaller;
-  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  width: 30vw;
+}
+.sec-aboutus p{
+  text-align: left;
+}
+.sec-aboutus ul{
+  display: flex;
+  flex-direction: row;
+  grid-gap: 12px;
+  margin: 10px 0px;
+}
+.sec-aboutus ul li{
+  list-style: none;
+  width: 3vw;
   height: 5vh;
 }
-.copy div a i {
-  font-size: 1.7em;
+
+.sec-aboutus ul li a{
+  color: #fff;
+  font-size: 20px;
 }
-.copy div {
-  margin-left: 20px;
+
+.sec-quicklinks , .sec-products,.sec-contactus{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 6vw;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
 }
-.copy p {
-  font-size: 1.5em;
+.sec-quicklinks ul{
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
 }
+
+.sec-quicklinks ul li ,.sec-products ul li{
+  list-style-type: none;
+  text-decoration: none; 
+  padding: 4px;
+}
+.sec-quicklinks ul li a,.sec-products ul li a{
+  text-decoration: none;  
+  color: #fff;
+}
+.sec-contactus ul li{
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+}
+.sec-contactus ul li a,.address{
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.copyrightText {
+  color: #fff;
+  position: relative;
+  top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Add Product page Styles */
 .add-product{
