@@ -7,6 +7,7 @@
 body{
   background: #e8e8e8;
   color: black;
+  font-family:Arial, Helvetica, sans-serif;
 }
 /*Header style*/
 header {
@@ -125,8 +126,7 @@ header {
 /* castomonial */
 
 nav .customonial {
-  background-color: gray;
-  background-image: url("../images/bg4.jpg");
+  background-image: url("../images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -178,7 +178,7 @@ nav .customonial {
 
 
 nav section div h1 {
-  color: #06f01a;
+  color: #067834;
   font-size: 5em;
   text-transform: uppercase;
   transition: all 2s;
@@ -209,7 +209,6 @@ nav section div {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: white;
   opacity: 0.4;
 }
 
@@ -221,6 +220,11 @@ main {
 
 /* styling for top selling */
 
+main .tp-title{
+  margin: 40px 0px;
+  color: white;
+  font-size: 5em;
+}
 .top-selling {
   width: 80vw;
   margin: 0px auto;
@@ -290,6 +294,105 @@ main {
   margin: 0px 10px;
 }
 
+
+
+
+
+
+/* responsive of top-selling */
+@media only screen and (max-width: 900px) {
+  .top-selling {
+    width: 80vw;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .top-selling .top-selling-cards {
+    background-color: #3ab505;
+    width: 25vw;
+    height: 50vh;
+    font-size: 10px;
+  }
+  .top-selling .top-selling-cards img {
+    width: 99.5%;
+    height: 30vh;
+  }
+  
+  .top-selling .top-selling-cards .top-selling-content {
+    width: 99%;
+    height: 20vh;
+  }
+
+
+
+}
+
+/* 650  */
+@media only screen and (max-width: 650px) {
+  .top-selling {
+    width: 80vw;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .top-selling .top-selling-cards {
+    background-color: #3ab505;
+    width: 35vw;
+    height: 45vh;
+    font-size: 9px;
+  }
+
+  .top-selling .top-selling-cards img {
+    width: 99.5%;
+    height: 25vh;
+  }
+  
+  .top-selling .top-selling-cards .top-selling-content {
+    width: 99%;
+    height: 20vh;
+  }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+  .top-selling {
+    width: 80vw;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .top-selling .top-selling-cards {
+    background-color: #3ab505;
+    width: 65vw;
+    height: 45vh;
+    font-size: 9.5px;
+  }
+
+  .top-selling .top-selling-cards img {
+    width: 99.5%;
+    height: 25vh;
+  }
+  
+  .top-selling .top-selling-cards .top-selling-content {
+    width: 99%;
+    height: 20vh;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
 /* sylling for card */
 
 .cards-title {
@@ -309,19 +412,20 @@ main {
 
 .cards .card {
   background-color: white;
-  height: 45vh;
-  width: 18vw;
+  height: 50vh;
+  width: 18.5vw;
   box-shadow: 0px 0px 6px 0px #333;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   margin: 8px 0px;
   padding: 5px;
+  font-size: 13px;
 }
 
 .cards .card img {
   width: 100%;
-  height: 22vh;
+  height: 30vh;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   /*border-bottom-right-radius: 100%;*/
@@ -336,14 +440,128 @@ main {
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
-  height: 22vh;
+  height: 20vh;
+}
+.card .discription p{
+  text-align: start;
 }
 
 .address-price{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
+
+
+/* Reponsive of cards */
+
+@media only screen and (max-width: 980px){
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 0px auto;
+    width: 80vw;
+    margin: 0px auto;
+  }
+  
+  .cards .card {
+    height: 45vh;
+    width: 24vw;
+    /* box-shadow: 0px 0px 6px 0px #333;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 8px 0px;
+    padding: 5px; */
+  }
+}
+@media only screen and (max-width: 730px){
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 0px auto;
+    width: 80vw;
+    margin: 0px auto;
+  }
+  
+  .cards .card {
+    height: 40vh;
+    width: 23vw;
+    font-size: 10px;
+  }
+  .cards .card img {
+    width: 100%;
+    height: 30vh;
+  }
+  .card .discription {
+    height: 10vh;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  
+  .cards .card {
+    height: 25vh;
+    width: 20vw;
+    /* box-shadow: 0px 0px 6px 0px #333;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 8px 0px;
+    padding: 5px; */
+    font-size: 7px;
+  }
+
+  .cards .card img {
+    width: 100%;
+    height: 12vh;
+  }
+
+  .card .discription {
+    height: 8vh;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+  .cards .card {
+    height: 25vh;
+    width: 32vw;
+    /* box-shadow: 0px 0px 6px 0px #333;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 8px 0px;
+    padding: 5px; */
+    font-size: 7px;
+  }
+
+  .cards .card img {
+    width: 100%;
+    height: 15vh;
+  }
+
+  .card .discription {
+    height: 10vh;
+  }
+}
+
+
+
+
+
+
 
 /* user register form  */
 
@@ -464,114 +682,6 @@ main {
   }
   .user-register form{
     width: 80%;
-  }
-}
-
-
-/* Reponsive of cards */
-
-@media only screen and (max-width: 980px){
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin: 0px auto;
-    width: 80vw;
-    margin: 0px auto;
-  }
-  
-  .cards .card {
-    height: 45vh;
-    width: 24vw;
-    /* box-shadow: 0px 0px 6px 0px #333;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin: 8px 0px;
-    padding: 5px; */
-  }
-}
-@media only screen and (max-width: 730px){
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    margin: 0px auto;
-    width: 80vw;
-    margin: 0px auto;
-  }
-  
-  .cards .card {
-    height: 45vh;
-    width: 35vw;
-    /* box-shadow: 0px 0px 6px 0px #333;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin: 8px 0px;
-    padding: 5px; */
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .cards .card {
-    height: 45vh;
-    width: 80vw;
-    /* box-shadow: 0px 0px 6px 0px #333;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin: 8px 0px;
-    padding: 5px; */
-  }
-}
-
-/* responsive of top-selling */
-@media only screen and (max-width: 1040px) {
-  .top-selling {
-    width: 80vw;
-    margin: 0px auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .top-selling .top-selling-cards {
-    background-color: #3ab505;
-    width: 38vw;
-    height: 75vh;
-    /* border: 1px solid red; */
-    align-items: center;
-    box-shadow: 0px 0px 10px 0px #333;
-    border-radius: 10px;
-    margin: 10px auto;
-  }
-}
-
-@media only screen and (max-width: 660px) {
-  .top-selling {
-    width: 80vw;
-    margin: 0px auto;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  
-  .top-selling .top-selling-cards {
-    background-color: #3ab505;
-    width: 80vw;
-    height: 60vh;
-    /* border: 1px solid red; */
-    align-items: center;
-    box-shadow: 0px 0px 10px 0px #333;
-    border-radius: 10px;
-    margin: 10px auto;
   }
 }
 
