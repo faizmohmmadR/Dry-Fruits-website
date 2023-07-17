@@ -89,7 +89,7 @@ header {
   position: sticky;
   top: 0px;
 }
-.navbar ul {
+.navbar ul  {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,15 +124,58 @@ header {
 
 /* castomonial */
 
-nav .cutomonial {
+nav .customonial {
   background-color: gray;
   background-image: url("../images/bg4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
-  height: 60vh;
+  height: 85vh;
 }
+
+@media only screen and (max-width: 1041px) {
+
+  nav .customonial {
+    height: 82vh;
+  }
+ }
+
+ @media only screen and (max-width: 500px) {
+  nav .customonial {
+    height: 50vh;
+  }
+
+  .customonial  form input{
+    width: 100%;
+  }
+
+ }
+
+.customonial  form{
+  position: relative;
+  bottom: 40%;
+}
+.customonial  form input{
+  padding: 10px;
+  width: 30%;
+  opacity: 0.5;
+  text-align: left;
+}
+
+
+
+.customonial  form button{
+  padding: 10px;
+  margin: 0px 0px;
+  border: 1px solid gray;
+  opacity: 0.5;
+  font-weight: bold;
+}
+.customonial  form button:hover{
+  background-color: #333;
+}
+
 
 nav section div h1 {
   color: #06f01a;
@@ -140,9 +183,24 @@ nav section div h1 {
   text-transform: uppercase;
   transition: all 2s;
 }
+
+@media only screen and (max-width: 1040px) {
+  nav section div h1 {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  nav section div h1 {
+    font-size: 2em;
+  }
+}
+
+
+
 nav section div h1:hover {
   color: #3ab505;
-  transform: scale(1.3, 1.3);
+  transform: scale(1.1, 1.1);
 }
 
 nav section div {
@@ -152,7 +210,7 @@ nav section div {
   width: 100%;
   height: 100%;
   background-color: white;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 main {
@@ -209,20 +267,21 @@ main {
   justify-content: space-around;
 }
 
-/* .top-selling .top-selling-content p{
-    padding: 0px;
-    color:  red;
-    border: 1px solid saddlebrown;
-    
-} */
+.top-selling .top-selling-content p{
+  text-align: left;
+  padding: 0px 7px;    
+}
 
 .top-selling .top-selling-cards .top-selling-content .price-name {
   display: flex;
   justify-content: space-between;
   margin: 0px 10px;
-
   /* border: 1px solid red; */
 }
+.top-selling .top-selling-cards .top-selling-content h2{
+  color: #fcba03;
+}
+
 
 .top-selling .top-selling-cards .top-selling-content .sold-stars {
   display: flex;
@@ -236,6 +295,8 @@ main {
 .cards-title {
   font-size: 2rem;
   padding: 20px;
+  text-transform: uppercase;
+  color: white;
 }
 
 .cards {
@@ -325,119 +386,6 @@ main {
 .user-register form button:hover {
   background-color: #067000;
 }
-
-/* footer styling  */
-
-footer{
-  background-color: #067834;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.container{
-  display: flex;
-  justify-content: space-around;
-  color: #fff;
-}
-
-@media screen and (max-width: 750px) {
-  .container , .copyrightText{
-    font-size: 10px;
-  }
-  
-}
-
-@media screen and (max-width: 750px) {
-  .container ,.copyrightText{
-    font-size: 7px;
-  }
-  footer{
-    height: 25vh;
-  }
-  .sec-aboutus ul li a i{
-    font-size: 12px;
-  }
-}
-
-.sec-aboutus{
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: 30vw;
-}
-.sec-aboutus p{
-  text-align: left;
-}
-.sec-aboutus ul{
-  display: flex;
-  flex-direction: row;
-  grid-gap: 12px;
-  margin: 10px 0px;
-}
-.sec-aboutus ul li{
-  list-style: none;
-  width: 3vw;
-  height: 5vh;
-}
-
-.sec-aboutus ul li a{
-  color: #fff;
-  font-size: 20px;
-}
-
-.sec-quicklinks , .sec-products,.sec-contactus{
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-}
-.sec-quicklinks ul{
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-.sec-quicklinks ul li ,.sec-products ul li{
-  list-style-type: none;
-  text-decoration: none; 
-  padding: 4px;
-}
-.sec-quicklinks ul li a,.sec-products ul li a{
-  text-decoration: none;  
-  color: #fff;
-}
-.sec-contactus ul li{
-  list-style-type: none;
-  padding: 10px;
-  display: flex;
-}
-.sec-contactus ul li a,.address{
-  text-decoration: none;
-  color: #fff;
-  margin-left: 10px;
-}
-
-.copyrightText {
-  color: #fff;
-  position: relative;
-  top: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -625,4 +573,105 @@ footer{
     border-radius: 10px;
     margin: 10px auto;
   }
+}
+
+
+/* footer styling  */
+
+footer{
+  background-color: #067834;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+
+@media screen and (max-width: 750px) {
+  .container , .copyrightText{
+    font-size: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 750px) {
+  .container ,.copyrightText{
+    font-size: 7px;
+  }
+  footer{
+    height: 25vh;
+  }
+  .sec-aboutus ul li a i{
+    font-size: 12px;
+  }
+}
+
+.sec-aboutus{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 30vw;
+}
+.sec-aboutus p{
+  text-align: left;
+}
+.sec-aboutus ul{
+  display: flex;
+  flex-direction: row;
+  grid-gap: 12px;
+  margin: 10px 0px;
+}
+.sec-aboutus ul li{
+  list-style: none;
+  width: 3vw;
+  height: 5vh;
+}
+
+.sec-aboutus ul li a{
+  color: #fff;
+  font-size: 20px;
+}
+
+.sec-quicklinks , .sec-products,.sec-contactus{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.sec-quicklinks ul{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.sec-quicklinks ul li ,.sec-products ul li{
+  list-style-type: none;
+  text-decoration: none; 
+  padding: 4px;
+}
+.sec-quicklinks ul li a,.sec-products ul li a{
+  text-decoration: none;  
+  color: #fff;
+}
+.sec-contactus ul li{
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+}
+.sec-contactus ul li a,.address{
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.copyrightText {
+  color: #fff;
+  position: relative;
+  top: 20px;
 }
