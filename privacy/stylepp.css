@@ -1,0 +1,29 @@
+
+user agent stylesheet
+div {
+    
+    display: block;
+}
+.entry-header, .site-content {
+    word-wrap: break-word;
+}
+body {
+    font-family: sans-serif, arial;
+}
+body {
+    line-height: 1.8;
+}
+body, button, input, select, textarea {
+    font-size: 20px;
+}
+body {
+    background-color:white;
+    color: var(--contrast);
+}
+body, button, input, select, textarea {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-weight: 400;
+    text-transform: none;
+    font-size: 17px;
+    line-height: 1.5;
+}
