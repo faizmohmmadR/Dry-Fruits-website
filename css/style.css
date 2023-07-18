@@ -121,6 +121,7 @@ header {
 }
 .navbar ul li a:hover {
   color: #067834;
+  cursor: pointer;
 }
 
 /* castomonial */
@@ -149,6 +150,10 @@ nav .customonial {
   .customonial  form input{
     width: 100%;
   }
+  /* .customonial .info{
+    position: relative;
+    bottom: 50px;
+  } */
 
  }
 
@@ -215,32 +220,38 @@ nav section div {
 main {
   display: flex;
   flex-direction: column;
-  margin-top: 3%;
 }
 
 /* styling for top selling */
 
-main .tp-title{
+/* main .tp-title{
   margin: 40px 0px;
   color: white;
   font-size: 5em;
-}
+} */
 .top-selling {
   width: 80vw;
   margin: 0px auto;
   display: grid;
+  place-items: center;
+  justify-items: center;
   grid-template-columns: repeat(3, 1fr);
+  /* border-bottom: 10px solid white; */
+
 }
 
 .top-selling .top-selling-cards {
-  background-color: #3ab505;
+  background-color: white;
   width: 25vw;
   height: 70vh;
   /* border: 1px solid red; */
   align-items: center;
-  box-shadow: 0px 0px 10px 0px #333;
+  box-shadow: 0px 0px 10px 0px black;
   border-radius: 10px;
   margin: 10px auto;
+  font-size: 15px;
+  border-bottom: 10px solid green;
+  border-top: 10px solid green;
 }
 
 .top-selling .top-selling-cards img {
@@ -263,7 +274,7 @@ main .tp-title{
   width: 99%;
   height: 49%;
   margin: 0px auto;
-  background-color: #3ab505;
+  background-color: white;
   border-radius: 10px;
   /* border: 1px solid green; */
   display: flex;
@@ -309,7 +320,6 @@ main .tp-title{
   }
   
   .top-selling .top-selling-cards {
-    background-color: #3ab505;
     width: 25vw;
     height: 50vh;
     font-size: 10px;
@@ -338,7 +348,6 @@ main .tp-title{
   }
   
   .top-selling .top-selling-cards {
-    background-color: #3ab505;
     width: 35vw;
     height: 45vh;
     font-size: 9px;
@@ -366,10 +375,9 @@ main .tp-title{
   }
   
   .top-selling .top-selling-cards {
-    background-color: #3ab505;
     width: 65vw;
     height: 45vh;
-    font-size: 9.5px;
+    font-size: 10px;
   }
 
   .top-selling .top-selling-cards img {
@@ -395,11 +403,20 @@ main .tp-title{
 
 /* sylling for card */
 
-.cards-title {
+.our-products,.top-selling-title {
   font-size: 2rem;
-  padding: 20px;
   text-transform: uppercase;
-  color: white;
+  color: gray;
+  background-color: white;
+  width: 80%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+  border-radius: 10px;
+
+  /* margin-top: 20px;text-transform: uppercase; */
 }
 
 .cards {
@@ -414,7 +431,7 @@ main .tp-title{
   background-color: white;
   height: 50vh;
   width: 18.5vw;
-  box-shadow: 0px 0px 6px 0px #333;
+  box-shadow: 0px 0px 6px 0px black;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -509,12 +526,6 @@ main .tp-title{
   .cards .card {
     height: 25vh;
     width: 20vw;
-    /* box-shadow: 0px 0px 6px 0px #333;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin: 8px 0px;
-    padding: 5px; */
     font-size: 7px;
   }
 
@@ -536,24 +547,18 @@ main .tp-title{
   }
   
   .cards .card {
-    height: 25vh;
+    height: 22vh;
     width: 32vw;
-    /* box-shadow: 0px 0px 6px 0px #333;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin: 8px 0px;
-    padding: 5px; */
-    font-size: 7px;
+    font-size: 8px;
   }
 
   .cards .card img {
     width: 100%;
-    height: 15vh;
+    height: 13vh;
   }
 
   .card .discription {
-    height: 10vh;
+    height: 9vh;
   }
 }
 
