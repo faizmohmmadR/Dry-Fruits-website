@@ -10,27 +10,25 @@
   <body>
     <div class="user-register">
       <h1>SignUp Page</h1>
-      <form action="#">
-        <!-- <label for="username">username: </label> -->
+      <form action="../html/index.html" method="get" id="form">
         <input
           type="text"
-          id="sername"
+          id="username"
           name="username"
           placeholder="Username"
         />
-        <!-- <label for="email">email</label> -->
-        <input type="email" id="email" name="email" placeholder="Email" />
-        <!-- <label for="password" >password</label> -->
+        <p id="username-error"></p>
+        <input type="text" id="email" name="email" placeholder="Email" />
+        <p id="email-error"></p>
         <input
           type="password"
           id="password"
           name="passord"
           placeholder="Password"
         />
-        <!-- <label for="phone">phone</label> -->
+        <p id="psw-error"></p>
         <input type="tel" id="phone" name="phone" placeholder="Phone" />
-        <!-- <label for="image">image</label> -->
-        <!-- <input type="file" id="img" name="image"> -->
+        <p id="phone-error"></p>
         <div class="button">
           <button type="reset">Reset</button>
           <button type="submit">Submit</button>
