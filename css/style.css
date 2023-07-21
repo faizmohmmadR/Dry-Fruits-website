@@ -419,6 +419,8 @@ main {
   /* margin-top: 20px;text-transform: uppercase; */
 }
 
+
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -514,6 +516,11 @@ main {
   .card .discription {
     height: 10vh;
   }
+  .our-products,.top-selling-title {
+    font-size: 1.5rem;
+    height: 10vh;
+    width: 80%;
+  }
 }
 
 
@@ -525,7 +532,7 @@ main {
   
   .cards .card {
     height: 25vh;
-    width: 20vw;
+    width: 18vw;
     font-size: 7px;
   }
 
@@ -536,6 +543,14 @@ main {
 
   .card .discription {
     height: 8vh;
+  }
+
+  /* title responsive */
+
+  .our-products,.top-selling-title {
+    font-size: 1rem;
+    height: 6vh;
+    width: 70%;
   }
 }
 
