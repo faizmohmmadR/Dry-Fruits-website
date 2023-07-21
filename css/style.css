@@ -572,28 +572,51 @@ main {
 
 .user-register {
   width: 45vw;
-  height: 60vh;
-  box-shadow: 0px 0px 10px 0px #333;
-  margin: 100px auto;
+  height: 63vh;
+  box-shadow: 0px 0px 10px 0px #067834;
+  margin: 7% auto;
   border-radius: 10px;
   padding: 10px;
+  background-color: white;
 }
 
 .user-register form {
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 3% auto;
+  margin: 0 auto;
 }
 
 .user-register form input {
+  border: 2px solid #25b5ba;
   text-align: left;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 3%;
+}
+
+.user-register form .error {
+  border-color: red;
 }
 
 .user-register form input:hover {
   border-color: blue;
+}
+.user-register form input:focus {
+  outline: 0;
+}
+/* .user-register form #error {
+  color: red;
+  text-align: start;
+  margin-left: 20px;
+  font-size: 12px;
+} */
+
+.user-register p{
+  color: red;
+  font-size: 12px;
+  text-align: start;
+  margin-top: 5px;
+
 }
 
 .user-register form button {
@@ -603,6 +626,7 @@ main {
   background-color: #067834;
   color: white;
   font-weight: bold;
+  font-size: 16px;
   border: 0px;
 }
 
