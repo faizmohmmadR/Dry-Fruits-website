@@ -652,6 +652,12 @@ main {
 .add-product h1{
   margin: 30px 0px;
 }
+
+.add-product .add-form #showError{
+  font-size: 10px;
+  text-align: start;
+}
+
 .add-form{
   display: flex;
   flex-direction: column;
@@ -673,6 +679,8 @@ main {
 .add-form input:hover{
   border-color: blue;
 }
+
+/* Show error style */
 
 
 .btn{
