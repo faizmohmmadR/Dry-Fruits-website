@@ -9,15 +9,19 @@
   <body>
     <div class="add-product">
       <h1>Add Product Page</h1>
-      <form class="add-form" action="#">
+      <form class="add-form" id="add-prd-form" action="../html/index.html" method="get" >
         <!-- <label for="product-name">Product Name</label> -->
         <input type="text" id="product-name" placeholder="Product Name" />
+        <p id="showError"></p>
         <!-- <label for="price">Price</label> -->
-        <input type="number" placeholder="Price" />
+        <input type="number" id="price" placeholder="Price" />
+        <p id="showError"></p>
         <!-- <label for="description">Description</label> -->
-        <input type="text" name="" id="" placeholder="Description" />
+        <input type="text" name="" id="product-description" placeholder="Description" />
+        <p id="showError"></p>
         <!-- <label for="address">Address</label> -->
         <input type="text" id="address" placeholder="Address" />
+        <p id="showError"></p>
         <!-- <label for="image">image</label> -->
         <input type="file" id="image" />
         <div class="btn">
@@ -26,5 +30,6 @@
         </div>
       </form>
     </div>
+    <script src="../javascript/addProductFormValidation.js"></script>
   </body>
 </html>

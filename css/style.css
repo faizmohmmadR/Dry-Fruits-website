@@ -667,6 +667,12 @@ main {
 .add-product h1{
   margin: 30px 0px;
 }
+/*showError style*/
+.add-product .add-form #showError{
+  font-size: 12px;
+  text-align: start;
+}
+
 .add-form{
   display: flex;
   flex-direction: column;
