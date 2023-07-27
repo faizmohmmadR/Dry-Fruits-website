@@ -10,23 +10,24 @@
   <body>
     <div class="user-register">
       <h1>Login Page</h1>
-      <form action="#">
+      <form action="../html/index.html" id="form">
         <!-- <label for="email">email</label> -->
-        <input type="email" id="email" name="email" placeholder="Email" />
+        <input type="text" id="login-email" name="email" placeholder="Email" />
+        <p></p>
         <!-- <label for="password" >password</label> -->
         <input
           type="password"
-          id="password"
+          id="login-password"
           name="passord"
           placeholder="Password"
         />
+        <p></p>
         <div class="button">
           <button type="reset">Reset</button>
           <button type="submit">Submit</button>
         </div>
       </form>
     </div>
-
-    <script src="../javascript/script.js"></script>
+    <script src="../javascript/loginValidation.js"></script>
   </body>
 </html>

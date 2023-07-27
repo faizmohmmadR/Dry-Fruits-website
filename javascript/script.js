@@ -1,81 +1,102 @@
-const form = document.getElementById('form')
-const username = document.getElementById('username')
-const email = document.getElementById('email')
-const password = document.getElementById('password');
-const phone = document.getElementById('phone');
-const usernameError = document.getElementById('username-error')
-const emailError = document.getElementById('email-error')
-const pswError = document.getElementById('psw-error')
-const phoneError = document.getElementById('phone-error')
+const form = document.getElementById("form");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const phone = document.getElementById("phone");
 
-
-form.addEventListener('submit',(e)=>{
-    e.preventDefault()
+let un = false;
+let em = false;
+let psw = false;
+let ph = false;
+try {
+  form.addEventListener("submit", (e) => {
+    if (!(un === true && em === true && (psw === true) & (ph === true))) {
+      e.preventDefault();
+    }
     checkInputs();
-})
+  });
 
-function checkInputs(){
-    const usernameValue  = username.value.trim()
-    const emailValue = email.value.trim()
-    const passwordValue = password.value.trim()
-    const phoneValue  = phone.value.trim()
+  function checkInputs() {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const phoneValue = phone.value.trim();
+    let vp = 0;
 
     // email pattern
-    const validEmail = /(\w+)(\d?)(\@)(\w{2,6})(\.)(\w{2,4})/
-    const result = validEmail.test(emailValue)
-    // // password pattern
-    // const digit = /\d/
-    // const charc = /\w/
-    // const digitResult = digit.test(passwordValue)
-    // const charResult = digit.test(passwordValue)
-    
-    // phone numbers patren
-    const validPhon = /\+(\93)(7)([0-9])\d{7,7}/g
+    const validEmail = /(\w+)(\d?)(\@)(\w{2,6})(\.)(\w{2,4})/;
+    const result = validEmail.test(emailValue);
 
-    if(usernameValue === ''){
-        setError(username, 'username required!')
-    }else if(usernameValue.length > 16 || usernameValue.length < 3){
-        setError(username,'username must be less than 16 and more than 3')
-    }else{
-        setSuccess(username)
-    }
-    
-    if(emailValue === ''){
-        setError(email,'email required!')
-    }else if(!result){
-        setError(email,'invalid email')
-    }else{
-        setSuccess(email)
+    const validPhon = /[0][7][0-9]{8,8}/g;
+
+    if (usernameValue === "") {
+      setError(username, "username required!");
+      un = false;
+    } else if (usernameValue.length > 16 || usernameValue.length < 3) {
+      setError(username, "username must be less than 16 and more than 3");
+      un = false;
+    } else {
+      setSuccess(username);
+      un = true;
     }
 
-    if(passwordValue === ""){
-        setError(password,'password is requred! ')
-    }else if(passwordValue.length > 16 || passwordValue.length < 4){
-        setError(password,'paswword must be less than 16 and more than 4')
-    }else{
-        setSuccess(password)
+    if (emailValue === "") {
+      setError(email, "email required!");
+      em = false;
+    } else if (!result) {
+      setError(email, "invalid email");
+      em = false;
+    } else {
+      setSuccess(email);
+      em = true;
+    }
+    vp = 0
+    vp += /[a-z]/.test(passwordValue) ? 1 : 0;
+    vp += /[A-Z]/.test(passwordValue) ? 1 : 0;
+    vp += /[0-9]/.test(passwordValue) ? 1 : 0;
+    vp += /[\W]/.test(passwordValue) ? 1 : 0;
+    vp += passwordValue.length >= 6 ? 1 : 0;
+    vp += passwordValue.length < 16 ? 1 : 0;
+
+    if (passwordValue === "") {
+      setError(password, "password is requred! ");
+    } else if (vp === 6) {
+      setSuccess(password);
+      psw = true;
+    } else {
+      setError(
+        password,
+        "weak password!!, password must include uperCase,lowrCase and special characters and numbders!!"
+      );
+      psw = false;
     }
 
-    if(!validPhon.test(phoneValue)){
-        setError(phone,'invalid phone numbers, phone number must starts with +937...')
-    }else if(phoneValue.length > 12){
-        setError(phone,'phone number must be less than 13 digits! ')
+    if (phoneValue.length > 10) {
+      setError(phone, "phone number must be less than 10 numbers!!");
+      ph = false;
+    } else if (!validPhon.test(phoneValue)) {
+      setError(
+        phone,
+        "invalid phone numbers, phone number must starts with 07..."
+      );
+      ph = false;
+    } else {
+      setSuccess(phone);
+      ph = true;
     }
-    else{
-        setSuccess(phone)
-    }
+  }
+
+  function setError(input, message) {
+    const formCntrol = input.nextElementSibling;
+    input.className = "error";
+    formCntrol.innerText = message;
+  }
+
+  function setSuccess(input) {
+    const formCntrol = input.nextElementSibling;
+    formCntrol.innerText = "";
+    input.style.borderColor = "green";
+  }
+} catch (e) {
+  console.log(e);
 }
-
-function setError(input,message){
-    const formCntrol = input.nextElementSibling
-    input.className = 'error'
-    formCntrol.innerText = message
-}
-
-function setSuccess(input){
-    const formCntrol = input.nextElementSibling
-    formCntrol.innerText = ''
-    input.style.borderColor = 'green'
-}
-
-
