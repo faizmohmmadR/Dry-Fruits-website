@@ -5,8 +5,14 @@ let price = document.getElementById('price');
 let decription = document.getElementById('product-description');
 let productAddress= document.getElementById('address');
 
+let pn = false
+let pp = false
+let pd = false
+let pa = false
 addForm.addEventListener('submit',(e)=>{
-    e.preventDefault()
+    if(!(pn === true && pp === true && pd === true && pa === true)){
+        e.preventDefault()
+    }
     addPcheck()
 })
 
@@ -26,6 +32,7 @@ function addPcheck() {
     }
     else{
         setSuccess(productName)
+        pn = true
     }
 
     /** product PRICE field */
@@ -37,6 +44,7 @@ function addPcheck() {
     }
     else{
         setSuccess(price);
+        pp = true
     }
 
     /** product decription field */
@@ -48,6 +56,7 @@ function addPcheck() {
     }
     else{
         setSuccess(decription);
+        pd = true
     }
 
     /** product address field */
@@ -59,6 +68,7 @@ function addPcheck() {
     }
     else{
         setSuccess(productAddress);
+        pa = true
     }
 }
 
