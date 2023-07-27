@@ -84,3 +84,17 @@ function setSuccess(input){
     errorElement.innerText = '';
     input.style.borderColor = 'green'
 }
+
+
+try{
+    addForm.addEventListener('reset',(e)=>{
+      if(confirm('are you sure!!'))
+      {
+        return true
+      }else{
+        e.preventDefault()
+      }
+    })
+  }catch(e){
+    console.log(e)
+  }
