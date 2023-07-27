@@ -89,6 +89,7 @@ header {
 .navbar {
   position: sticky;
   top: 0px;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,6 +116,12 @@ header {
   list-style-type: none;
   width: 12%;
 }
+@media only screen and (max-width: 900px){
+  .navbar ul li {
+    font-size: 13px;
+  }
+}
+
 @media only screen and (max-width: 730px){
   .navbar ul li {
     width: 20%;

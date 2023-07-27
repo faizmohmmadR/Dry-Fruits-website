@@ -100,3 +100,16 @@ try {
 } catch (e) {
   console.log(e);
 }
+
+try{
+  form.addEventListener('reset',(e)=>{
+    if(confirm('are you sure!!'))
+    {
+      return true
+    }else{
+      e.preventDefault()
+    }
+  })
+}catch(e){
+  console.log(e)
+}
