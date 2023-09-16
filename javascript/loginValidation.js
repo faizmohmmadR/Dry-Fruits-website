@@ -7,7 +7,7 @@ let ps = false;
 let vp = 0; // validated password
 try {
   form.addEventListener("submit", (e) => {
-    if (!(em === true && _ps === true)) {
+    if (!(em === true && ps === true)) {
       e.preventDefault();
     }
     checkInputs();

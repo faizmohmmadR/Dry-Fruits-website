@@ -9,17 +9,21 @@ div {
 }
 body {
     font-family: sans-serif, arial;
-}
-body {
     line-height: 1.8;
-}
-body, button, input, select, textarea {
-    font-size: 20px;
-}
-body {
     background-color:white;
     color: var(--contrast);
 }
+
+@media only screen and (max-width: 600px) {
+    body{
+        font-size: 12px;
+    }
+}
+
+body, button, input, select, textarea {
+    font-size: 20px;
+}
+
 body, button, input, select, textarea {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-weight: 400;
